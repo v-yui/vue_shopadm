@@ -6,12 +6,17 @@
         <img src="../assets/logo.png" />
       </div>
       <!-- 表单区域  -->
-      <el-form label-width="0px">
+      <el-form label-width="0px" class="login_form">
         <el-form-item >
-          <el-input></el-input>
+          <el-input prefix-icon="iconfont icon-ren"></el-input>
         </el-form-item>
         <el-form-item >
-          <el-input></el-input>
+          <el-input prefix-icon="iconfont icon-suo"></el-input>
+        </el-form-item>
+        <!-- 按钮 -->
+        <el-form-item class="btns">
+            <el-button type="primary">主要按钮</el-button>
+             <el-button type="info">信息按钮</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -53,5 +58,18 @@
       background-color: #ccc;
     }
   }
+}
+.login_form {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 20px;
+   //box-sizing  屬性 用於更改預設 CSS 盒子模型 中所計算的寬度和高度。
+   //可以使用此屬性來模擬不正確支持CSS盒子模型規範的瀏覽器的行為。
+    box-sizing: border-box;
+}
+.btns {
+    display: flex;
+    justify-content: flex-end;
 }
 </style>

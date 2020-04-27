@@ -40,3 +40,13 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 #### 2020.4.26
 1. 发现之前新建的login分支中的代码丢失了一部分，没有发现问题所在(或许是忘了保存8)，Element-UI也不见了，但是由于没意识到所以捣鼓了半天也没修复好，于是重建了login2分支来写登录组件；
 2. 编写了大致布局及头像框，使用Element-UI来完成登录组件的表单部分；
+3. 在阿里图标库选用需要的icon，下载代码复制到assets文件夹(css,eot,svg,ttf,woff文件)在main.js中引入iconfont.css文件，在需要的地方作为属性值写入；
+
+#### 2020.4，27
+1. 为Element-UI表单添加model属性绑定数据；
+2. 在写login组件的data时报错，原因是esllint规定括号函数括号前需要一个空格 ，在.eslintrc.js的rules中添加 `'space-before-function-paren':0`即可；
+3. 通过rules属性为Element-UI表单添加验证规则实现表单验证；
+4. ref获得表单的引用对象，使用Element-UI 的resetFields 完成重置按钮；
+5. 使用axios完成登录请求部分；
+6. 使用Element-UI的Message来完成登录状态的提示，将Message挂载到Vue原型对象上使得项目每个组件都可以通过this来访问$Message以使用Message提示；
+

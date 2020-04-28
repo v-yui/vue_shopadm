@@ -50,3 +50,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 5. 使用axios完成登录请求部分；
 6. 使用Element-UI的Message来完成登录状态的提示，将Message挂载到Vue原型对象上使得项目每个组件都可以通过this来访问$Message以使用Message提示；
 
+#### 2020.4.28
+1. 为路由对象添加导航守卫beforeEach控制访问权限；
+2. 在home页增加退出按钮，用清空token来实现(因为上一步的导航守卫检测到没有token会重定向到login页)；
+

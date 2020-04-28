@@ -34,7 +34,7 @@
 export default {
   data() {
     return {
-      // 写了一个小锁图标的动态修改
+      // 写了一个小锁图标的动态修改，哈，然后跳转就看不到了
       passwordIcon: 'iconfont icon-suo',
       // 登录表单的数据绑定对象
       loginForm: {

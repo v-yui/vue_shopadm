@@ -53,4 +53,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 #### 2020.4.28
 1. 为路由对象添加导航守卫beforeEach控制访问权限；
 2. 在home页增加退出按钮，用清空token来实现(因为上一步的导航守卫检测到没有token会重定向到login页)；
+3. 合并login2分支到master；
+4. 使用Element-UI的Container布局容器完成home页的基本布局并美化Header区；
+5. 使用Element-UI的NavMenu导航菜单，梳理后完成侧边栏基本格式；
+6. 通过axios请求拦截器添加token，保证拥有获取数据的权限；
 

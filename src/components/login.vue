@@ -60,8 +60,8 @@ export default {
       this.$refs.loginRef.validate(async valid => {
         if (!valid) return 0
         const { data: res } = await this.$http.post('login', this.loginForm)
-        if (res.meta.status !== 200) return this.$message.error('登录失败！')
-        this.$message.success('登录成功！')
+        if (res.meta.status !== 200) return this.$message.error('登录失败 > <')
+        this.$message.success('欢迎访问管理系统 ;)')
         this.passwordIcon = 'iconfont icon-suo1'
         // 把token保存到sessionStorage
         window.sessionStorage.setItem('token', res.data.token)

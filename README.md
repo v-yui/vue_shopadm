@@ -56,5 +56,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 3. 合并login2分支到master；
 4. 使用Element-UI的Container布局容器完成home页的基本布局并美化Header区；
 5. 使用Element-UI的NavMenu导航菜单，梳理后完成侧边栏基本格式；
-6. 通过axios请求拦截器添加token，保证拥有获取数据的权限；
+6. 需要授权的API需要在请求头中使用Authorization字段提供token令牌，通过axios请求拦截器添加token，保证拥有获取数据的权限；
 
+#### 2020.4.30
+1. 调用home组件的created，请求左侧菜单栏的数据；
+2. 使用v-for渲染菜单栏数据；
+3. 侧边栏的icon替换，折叠展开效果等；
+4. main部分的路由跳转；

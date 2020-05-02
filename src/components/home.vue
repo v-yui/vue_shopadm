@@ -14,14 +14,14 @@
       <el-aside :width="isCollapse ? '64px' : '200px'">
         <div class="toggle" @click="toggleCollapse">+</div>
         <el-menu
-          default-active="2"
           class="el-menu-vertical-demo"
           background-color="#3b6978"
           text-color="#fff"
           active-text-color="#99c440"
           :collapse="isCollapse"
           :collapse-transition="false"
-          router="true"
+          :router="true"
+          :default-active="activePath"
         >
         <!-- 不变的index将使每一项无法单独控制展开；index只接收字符串，加空字符串使之成为字符串 -->
           <el-submenu :index="item.id + ''" v-for="item in menuList" :key="item.id">
@@ -31,7 +31,8 @@
               <span>{{item.authName}}</span>
             </template>
             <!-- 二级菜单 -->
-            <el-menu-item :index="'/' + subItem.path + ''" v-for="subItem in item.children" :key="subItem.id">
+            <el-menu-item :index="'/' + subItem.path + ''" v-for="subItem in item.children"
+             :key="subItem.id" @click="saveNavState('/' + subItem.path)">
               <template slot="title">
                 <i class="el-icon-s-flag"></i>
                 <span>{{subItem.authName}}</span>
@@ -51,11 +52,13 @@
 export default {
   created() {
     this.getMenu()
+    this.activePath = window.sessionStorage.getItem('activePath')
   },
   data() {
     return {
       menuList: [],
-      isCollapse: false
+      isCollapse: false,
+      activePath: ''
     }
   },
   methods: {
@@ -69,11 +72,14 @@ export default {
       const { data: res } = await this.$http.get('menus')
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
       this.menuList = res.data
-      console.log(res)
     },
     // 折叠菜单切换
     toggleCollapse() {
       this.isCollapse = !this.isCollapse
+    },
+    saveNavState(activePath) {
+      window.sessionStorage.setItem('activePath', activePath)
+      this.activePath = activePath
     }
   }
 }

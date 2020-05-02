@@ -63,3 +63,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 2. 使用v-for渲染菜单栏数据；
 3. 侧边栏的icon替换，折叠展开效果等；
 4. main部分的路由跳转；
+
+#### 2020.5.2
+1. 为左侧栏添加刷新/回退操作后的高亮保持；
+2. 使用Element-UI的Breadcrumb 面包屑完成Users的导航栏；
+3. 使用Element-UI的Card 卡片完成Users的卡片视图区域，并覆盖默认样式写入global.css；
+4. 使用Element-UI的Input 输入框添加至Users的卡片视图区域，并使用Row 组件来控制栅格布局；

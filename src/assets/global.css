@@ -4,3 +4,11 @@ html, body, #app {
     margin: 0;
     padding: 0;
 }
+
+.el-breadcrumb {
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+.el-card {
+    box-shadow: 3px 5px 3px rgba(37, 89, 106, 0.2) !important;
+}

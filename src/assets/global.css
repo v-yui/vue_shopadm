@@ -12,3 +12,6 @@ html, body, #app {
 .el-card {
     box-shadow: 3px 5px 3px rgba(37, 89, 106, 0.2) !important;
 }
+.el-table {
+    margin-top: 15px;
+}

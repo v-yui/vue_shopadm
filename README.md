@@ -69,3 +69,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 2. 使用Element-UI的Breadcrumb 面包屑完成Users的导航栏；
 3. 使用Element-UI的Card 卡片完成Users的卡片视图区域，并覆盖默认样式写入global.css；
 4. 使用Element-UI的Input 输入框添加至Users的卡片视图区域，并使用Row 组件来控制栅格布局；
+
+#### 2020.5.6
+1. 从接口获取用户列表数据；
+2. 使用Element-UI的Table 表格渲染数据；
+3. 使用v-slot插槽将用户列表状态栏渲染为Element-UI的Switch 开关样式；
+4. 使用v-slot插槽和Element-UI的Button图标按钮及Tooltip 文字提示完成用户列表的操作栏；

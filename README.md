@@ -75,3 +75,14 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 2. 使用Element-UI的Table 表格渲染数据；
 3. 使用v-slot插槽将用户列表状态栏渲染为Element-UI的Switch 开关样式；
 4. 使用v-slot插槽和Element-UI的Button图标按钮及Tooltip 文字提示完成用户列表的操作栏；
+
+#### 2020.5.7
+1. 使用Element-UI的Pagination 分页为用户列表添加分页显示功能；
+2. 完成通过状态栏的开关修改后台数据功能；
+3. 完成搜索框过滤用户列表功能；
+4. 并使用Element-UI的Dialog 对话框和Form 表单完成添加用户的表单；
+
+#### 2020.5.8
+1. 完成添加用户功能；
+2. 完成修改用户信息功能，实现方式同添加用户，但要通过id获取该用户数据预写在表单中；
+3. 完成删除用户功能，使用Element-UI的MessageBox 弹框进行删除确认；
